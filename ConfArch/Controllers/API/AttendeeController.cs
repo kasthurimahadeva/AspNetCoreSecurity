@@ -2,7 +2,7 @@
 using ConfArch.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ConfArch.Controllers
+namespace ConfArch.Controllers.API
 {
     [Route("api/[controller]")]
     public class AttendeeController : Controller
