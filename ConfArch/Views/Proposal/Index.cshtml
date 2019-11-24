@@ -14,10 +14,7 @@
                     <td>@proposal.Title</td>
                     <td>@proposal.Speaker</td>
                     <td>
-                        @if (proposal.Approved)
-                        {
-                            <div class="glyphicon glyphicon-check"></div>
-                        }
+                        @proposal.Approved
                     </td>
                     <td>
                         @if (!proposal.Approved)
