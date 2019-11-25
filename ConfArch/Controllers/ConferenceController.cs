@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ConfArch.Controllers
 {
+    [RequireHttps]
     public class ConferenceController : Controller
     {
         private readonly ConferenceRepo repo;
