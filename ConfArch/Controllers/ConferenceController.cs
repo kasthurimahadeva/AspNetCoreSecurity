@@ -1,4 +1,5 @@
-﻿using ConfArch.Models;
+﻿using System;
+using ConfArch.Models;
 using ConfArch.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,8 +15,12 @@ namespace ConfArch.Controllers
             this.repo = repo;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string returnUrl)
         {
+            if (!string.IsNullOrEmpty(returnUrl) && !Url.IsLocalUrl(returnUrl))
+            {
+                Console.WriteLine("Hi Panda");
+            }
             ViewBag.Title = "Organizer - Conference Overview";
             return View(repo.GetAll());
         }
