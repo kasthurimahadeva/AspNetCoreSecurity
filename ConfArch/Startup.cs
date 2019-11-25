@@ -46,6 +46,7 @@ namespace ConfArch
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseCsp(options => options.DefaultSources(s => s.Self()));
 
             app.UseRouting();
 
