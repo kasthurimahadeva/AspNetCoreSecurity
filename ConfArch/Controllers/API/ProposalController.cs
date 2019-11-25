@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace ConfArch.Controllers.API
 {
     [Route("api/[controller]")]
-    public class ProposalController
+    public class ProposalController: Controller
     {
         private readonly ProposalRepo repo;
 
