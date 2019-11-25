@@ -27,6 +27,7 @@ namespace ConfArch.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Add(ConferenceModel model)
         {
             if (ModelState.IsValid)
